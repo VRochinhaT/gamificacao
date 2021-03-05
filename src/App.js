@@ -6,6 +6,7 @@ function App() {
   const [gamificacao, setGamificacao] = useState([{}]);
   const [data, setData] = useState('')
   
+
   useEffect( () => {
     const getGamificacao = async () => {
       const endpoint = 'https://spreadsheets.google.com/feeds/list/1AJt6VNVS0Qa4X3EP2KKcVJNpmrENHiYakFxx6u8bvQ8/oxlfih8/public/values?alt=json'
@@ -35,7 +36,7 @@ function App() {
 
       <span class='heading'>Ranking</span>
       <span style={{float: 'right'}}>Último update: {data}</span>
-      <p><i>A escala de pontos vai até 100 pontos</i></p>
+      <p><i>A escala de pontos vai de 0 a 100</i></p>
       <hr/>
 
       <div class='row'>
@@ -48,8 +49,6 @@ function App() {
           })
         }
       </div>
-      
-
     </div>
   );
 }
